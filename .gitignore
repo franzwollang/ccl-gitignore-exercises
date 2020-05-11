@@ -1,22 +1,39 @@
 #This is a comment line.
 
-
 # Ignore all files in root/1/ that are three letters, and start and end with an 'm'.
-
+#root/1/m?m
 
 # Comment the previous line out. Now ignore all files in root/1/ that are three letters, that start and end with 'm', and that have a vowel as the middle letter.
 
+root/1/m[aeuio]m
 
 # Ignore all files in root/2/ that follow the pattern 'file##' where '#' stands for a digit, except 'file13'.
 
+root/2/file[1-9]
+root/2/file[1-9][0-2]
 
 # Ignore all files in root/3/ that have the file extension '.js'.
 
+#root/3/*.js
+#root/3/*/*.js
+#root/3/**/*.js
 
 # Comment the previous line out. Now ignore all files in root/3/ except 'package.json' and 'package-lock.json'.
 
+root/3/*
+!root/3/package.json
+!root/3/package-lock.json
 
 # Add an exception to the ignore glob for the super secret file.
 
+#!**/superSecretNaughtyPhoto.jpg
 
 # Unfortunately, it is not possible to re-include a file if a parent directory of that file is excluded.
+
+!root/3/public
+!root/3/public/assets
+!**/superSecretNaughtyPhoto.jpg
+
+root/3/public/assets/pic[1-3].*
+root/3/public/fonts
+root/3/public/icons
