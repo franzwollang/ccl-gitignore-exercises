@@ -1,0 +1,22 @@
+#This is a comment line.
+
+
+# Ignore all files in root/1/ that are three letters, and start and end with an 'm'.
+
+
+# Comment the previous line out. Now ignore all files in root/1/ that are three letters, that start and end with 'm', and that have a vowel as the middle letter.
+
+
+# Ignore all files in root/2/ that follow the pattern 'file##' where '#' stands for a digit, except 'file13'.
+
+
+# Ignore all files in root/3/ that have the file extension '.js'.
+
+
+# Comment the previous line out. Now ignore all files in root/3/ except 'package.json' and 'package-lock.json'.
+
+
+# Add an exception to the ignore glob for the super secret file.
+
+
+# Unfortunately, it is not possible to re-include a file if a parent directory of that file is excluded.
